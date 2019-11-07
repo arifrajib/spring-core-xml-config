@@ -43,12 +43,22 @@ public BaseballCoach(FortuneService service) {
 configure the Bean
 
 ```
-
+	<bean id="baseballCouch"
+			class="com.arifrajib.springcorexml.BaseballCoach">
+		<!-- Setup Constructure Inhection -->	
+	<constructor-arg ref="myFortune" />
 ```
 
 #### Create application context container
 
-```
+Create application context
 
 ```
+ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+```
 
+Call the Bean
+
+```
+System.out.println(theCoutch.getDailyFortune());
+```
