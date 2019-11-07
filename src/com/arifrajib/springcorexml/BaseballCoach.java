@@ -20,5 +20,13 @@ public class BaseballCoach implements Couch {
 		//use fortuneService to get a fortune 
 		return fortuneService.getFortune();
 	}
+	
+	public void sayWelcomeStartup() {
+		System.out.println("Init Method is booting up");
+	}
+	
+	public void sayByeMessage() {
+		System.out.println("Destry Method, Say bye.");
+	}
 
 }

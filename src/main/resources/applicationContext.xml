@@ -10,7 +10,9 @@
 	
 	<!-- Define the Bean with Dependency Injection -->
 	<bean id="baseballCouch"
-			class="com.arifrajib.springcorexml.BaseballCoach">
+			class="com.arifrajib.springcorexml.BaseballCoach"
+			init-method="sayWelcomeStartup"
+			destroy-method="sayByeMessage">
 		<!-- Setup Constructure Inhection -->	
 		<constructor-arg ref="myFortune" />
 	</bean>
